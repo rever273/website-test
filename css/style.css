@@ -1,16 +1,172 @@
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    font-family: 'Silkscreen', sans-serif;
+    position: relative;
     margin: 0;
     padding: 0;
 
-    background-image: url('/images/405ba771.jpg');
-    background-size: cover;
-    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Overlay with 70% transparency */
+/* Add a background image with transparency */
 body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: url('/images/674925.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.7; */
+    z-index: -1;
+}
+
+
+/* Style the header */
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    padding: 0 10px;
+    /* Space out the nav items */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    /* Change as needed */
+    font-size: 18px;
+    /* Larger links for easier tapping */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CTA Styles */
+#cta-section {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.cta-background {
+    background-image: url('/images/f7c6c0fe1eab.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 250px 20px;
+}
+
+.cta-content {
+    position: relative;
+    display: inline-block;
+    max-width: 500px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Booking Form Styles */
+#booking-form-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f0f0f0;
+    position: relative;
+    background-image: url('/images/samolet-vertolet-dirizhabl.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#booking-form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    /* White color with 70% opacity */
+    z-index: 1;
+}
+
+#booking-form-section * {
+    position: relative;
+    z-index: 2;
+}
+
+#booking-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Hotel Booking Form Styles */
+#hotel-booking-form-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f0f0f0;
+    position: relative;
+    background-image: url('/images/Nopsi-New-Orleans-Lobby.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#hotel-booking-form-section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -18,32 +174,217 @@ body::before {
     bottom: 0;
     left: 0;
     background: rgba(255, 255, 255, 0.7);
-    z-index: -1;
+    /* White color with 70% opacity */
+    z-index: 1;
 }
 
-.container {
-    width: 80%;
+#hotel-booking-form-section * {
+    position: relative;
+    z-index: 2;
+}
+
+#hotel-booking-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
     margin: auto;
-    overflow: hidden;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-.source {
-    font-size: small;
-    color: #666;
-}
-
-.center-image {
+.form-group label {
     display: block;
-    /* Images are inline by default. Change this to block to apply margins */
-    width: 600px;
-    /* Set the width of the image */
-    height: auto;
-    /* This will maintain the aspect ratio of the image */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    max-width: 400px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+/*extra-video section*/
+#extra-video {
+    padding: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    color: #fff;
+    background-image: url('/images/sss2assets.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.responsive-video-container {
+    display: block;
+    width: 70%;
+    max-width: 600px;
     margin: 0 auto;
-    /* This will center the image horizontally */
+
+    /* position: relative;
+    overflow: hidden;
+    padding-top: 30%;
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto; */
+    /* max-height: 500px; */
+}
+
+.responsive-video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+/* contact form */
+#contact-us {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    /* Максимальная ширина формы */
+    margin: auto;
+}
+
+#contact-form label,
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+    width: 100%;
+    /* Ширина элементов формы */
+    margin-top: 10px;
+    /* Отступ сверху для всех элементов */
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#contact-form textarea {
+    height: auto;
+    /* Убрать фиксированную высоту */
+    resize: vertical;
+    /* Позволить изменение размера только по вертикали */
+}
+
+#contact-form button {
+    padding: 10px;
+    background-color: rgb(7, 78, 16);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: 'Silkscreen', sans-serif;
+    margin-top: 20px;
+    /* Отступ сверху для кнопки */
+}
+
+#contact-form button:hover {
+    background-color: rgb(0, 179, 54);
+}
+
+/* Footer styles */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/*Other code pieces */
+.mobile-friendly-button {
+    padding: 15px 30px;
+    /* Larger padding for a bigger button */
+    font-size: 18px;
+    /* Larger font size for readability */
+    color: #fff;
+    /* Adjust text color as needed */
+    background-color: #007bff;
+    /* Adjust background color as needed */
+    border: none;
+    border-radius: 5px;
+    /* Rounded corners for a modern look */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.mobile-friendly-button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover for visual feedback */
+}
+
+/*Mobile version*/
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        /* Add some space between logo and nav */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav li {
+        text-align: center;
+        padding: 10px 0;
+        /* More vertical padding for tap targets */
+    }
+
+    #extra-video {
+        height: 250px;
+    }
+
+    #contact-form {
+        width: 90%;
+        /* Ширина формы на мобильных устройствах */
+    }
+
+    .mobile-friendly-button {
+        width: auto;
+        /* Auto width allows it to grow with the text content */
+        display: block;
+        /* Makes the button take the full width of its container */
+        margin: 10px auto;
+        /* Centers the button and adds some margin around it */
+    }
 }
