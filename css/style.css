@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    background-image: url('/images/405ba771.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Overlay with 70% transparency */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.source {
+    font-size: small;
+    color: #666;
+}
+
+.center-image {
+    display: block;
+    /* Images are inline by default. Change this to block to apply margins */
+    width: 600px;
+    /* Set the width of the image */
+    height: auto;
+    /* This will maintain the aspect ratio of the image */
+    margin: 0 auto;
+    /* This will center the image horizontally */
+}
